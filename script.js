@@ -4,7 +4,7 @@ let money=prompt("ваш бютжет на месяц?"),
 let expenseItem=prompt("Введите обязательную статью расходов в этом месяце"),
     price=prompt("Во сколько обойдется?");
 let appData={
-    mone:money,
+    budget:money,
     timeData:time,
     expenses:{},
     optionalExpenses:{},
