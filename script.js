@@ -1,12 +1,17 @@
 'use strict';
+let money=prompt("ваш бютжет на месяц?"),
+    time=prompt("Введите дату в формате YYYY-MM-DD");
+let expenseItem=prompt("Введите обязательную статью расходов в этом месяце"),
+    price=prompt("Во сколько обойдется?");
+let appData={
+    mone:money,
+    timeData:time,
+    expenses:{},
+    optionalExpenses:{},
+    income : [],
+    savings:false
+};
+appData.expenses.expenseItem=price;
 
-/*alert('hello World');*/
-/*let answer=+prompt('18 есть?', "да");
-console.log(typeof(answer));
-
-console.log('arr'+ ' - abj');
-console.log(4+ +" - jbj");*/
-let iner=10,
-    deer=10;
-console.log(iner++);
-console.log(deer--);
+alert("бюджет на 1 день = "+ (appData.mone-appData.expenses.expenseItem)/30);
+console.log(appData);
