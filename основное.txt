@@ -33,3 +33,4 @@ git config --global user.email
 git status узнать статус репозитория
 git add -A все файлы добавляются в репозиторий
 git add nameFile добовить отдельный файл
+git log просмотреть какие были коммиты
