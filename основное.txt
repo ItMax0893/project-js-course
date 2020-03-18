@@ -240,6 +240,36 @@ div.innerHTML = '<h1>Hello World</h1>'; добавление HTML кода на 
 div.textContent = 'hello World'; добавление текста в блок
 
 
+
+=================== СОБЫТИЯ ===================================================================
+
+element.addEventListener('click', function(){});
+
+element.addEventListener('click', function(event){
+    console.log(event.type+ ' '+ event.target);    
+});
+
+==  всплытие событий это когда оработчик события срабатывает на самом вложенном элементе,
+    затем на родителе, выше.
+
+==  отмена стандартных событий'
+element.addEventListener('click', function(event){
+    event.preventDefault();
+});
+   
+==== переюор всех элементов в псевдомассиве
+btn.forEach(function(item){
+    item.addEventListener('mouseleave', function(event){
+        let target = event.target;
+        target.style.width='40px';
+        console.log('вышли');
+    });
+});
+
+
+
+
+
           
 
 
