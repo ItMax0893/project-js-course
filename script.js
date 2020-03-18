@@ -7,7 +7,7 @@ function start(){
             money=prompt("ваш бютжет на месяц?");
         } 
 }
-start();
+//start();
 
 let appData={
     budget:money,
@@ -79,13 +79,34 @@ let appData={
 
 };
 
+console.log('Наша программа включает в себя данные: ');
+for(let data in appData){
+    console.log(data+ ': '+ appData[data]);
+}    
 
 
-    console.log('Наша программа включает в себя данные: ');
-    for(let data in appData){
-        console.log(data+ ': '+ appData[data]);
-    }    
 
 
+let starts = document.getElementById('start'),
+    budgetValue = document.getElementsByClassName('budget-value'),
+    daybudgetValue = document.getElementsByClassName('daybudget-value'),
+    levelValue = document.getElementsByClassName('level-value'),
+    expensesValue = document.getElementsByClassName('expenses-value'),
+    optionalExpensesValue = document.getElementsByClassName('optionalexpenses-value'),
+    incomeValue = document.getElementsByClassName('income-value'),
+    monthsavingsValue = document.getElementsByClassName('monthsavings-value'),
+    yearsavingsValue = document.getElementsByClassName('yearsavings-value'),
+    inputExp = document.getElementsByClassName('expenses-item'),
+    btnExp = document.getElementsByTagName('button')[0],
+    btnOptExp = document.getElementsByTagName('button')[1],
+    btnCount = document.getElementsByTagName('button')[2],
+    optExp = document.querySelectorAll('.optionalexpenses-item'),
+    chooseInc = document.querySelector('#income'),
+    savings = document.querySelector('#savings'),
+    savingsSum = document.querySelector('#sum'),
+    savingsProcent = document.querySelector('#percent'),
+    year = document.querySelector('.year-value'),
+    month = document.querySelector('.month-value'),
+    day = document.querySelector('.day-value');
 
 
